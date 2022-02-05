@@ -1,6 +1,7 @@
 ﻿using Data.Context;
 using Data.Interfaces;
 using Entities.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace Data.Implementations
 {
@@ -25,7 +26,7 @@ namespace Data.Implementations
 
         public async Task<User> GetUserById(int id, CancellationToken cancellationToken)
         {
-            return await _dbContext.Users.FindAsync(id, cancellationToken);
+            return await _dbContext.Users.SingleOrDefaultAsync( i => i.Id == id, cancellationToken);
         }
 
         public async Task UpdateUser(int id, User user, CancellationToken cancellationToken)

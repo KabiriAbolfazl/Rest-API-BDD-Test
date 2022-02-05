@@ -1,14 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using SpecFlowApi.Controllers;
 using TechTalk.SpecFlow;
 
 namespace SpecFlowTest.UserTest
 {
-    internal class GetUserFeature
+    public class GetUserFeature
     {
+        UserController userController;
+
         [Given(@"that a user exists in the system")]
         public void GivenThatAUserExistsInTheSystem()
         {

@@ -12,4 +12,8 @@
     <PackageReference Include="SpecFlow.Tools.MsBuild.Generation" Version="3.9.40" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\SpecFlowApi\SpecFlowApi.csproj" />
+  </ItemGroup>
+
 </Project>
